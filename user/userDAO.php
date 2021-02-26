@@ -42,7 +42,7 @@ class UserDAO {
     require_once('./utilities/connection.php');
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO user_table.users (`userName`,
+    $stmt = $conn->prepare("INSERT INTO testdb.users (`userName`,
     `password`,
     `firstName`,
     `lastName`) VALUES (?, ?, ?, ?)");
@@ -58,6 +58,7 @@ class UserDAO {
     $stmt->close();
     $conn->close();
   }
+
 
   function deleteUser($un){
     require_once('./utilities/connection.php');
