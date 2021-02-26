@@ -6,6 +6,9 @@ $password = "Metobe3!";
 //$password = (isset($_SESSION["SQLPW"]) ? $_SESSION["SQLPW"] : $_ENV['SQLPW']);
 $dbname = "testdb";
 
+
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
