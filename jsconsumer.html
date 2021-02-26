@@ -1,9 +1,15 @@
-<h1 id="header1"></h1>
+<h1 id="jsConsumer Page"></h1>
 
 <script>
+    function hello(){
+        fetch
+    }
 
-    function hello(userid){
-        fetch('https://bookscs3620.azurewebsites.net/TestCodeFromClass/users.php?id=' + userid)
+
+// select statement based off user id
+function userselect(user_id)
+    {
+        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + user_id)
         .then(response => response.json())
         .then(
 
@@ -21,14 +27,85 @@
         });
     }
 
+// select statement based off username
+    function usernameselect(username)
+    {
+        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + username)
+        .then(response => response.json())
+        .then(
+
+            function (data){
+                document.getElementById("firstName").innerHTML = data.first_name;
+                document.getElementById("lastName").innerHTML = data.last_name;
+                document.getElementById("userName").innerHTML = data.username;
+            }
+
+        ).catch((error) => {
+            alert("That user does not yet exist")
+            document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = "";
+        });
+    }
+
+// select statement based off first name
+function firstnameselect(first_name)
+    {
+        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + first_name)
+        .then(response => response.json())
+        .then(
+
+            function (data){
+                document.getElementById("firstName").innerHTML = data.first_name;
+                document.getElementById("lastName").innerHTML = data.last_name;
+                document.getElementById("userName").innerHTML = data.username;
+            }
+
+        ).catch((error) => {
+            alert("That user does not yet exist")
+            document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = "";
+        });
+    }
+
+// select statement based off last name
+function lastnameselect(last_name)
+    {
+        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + last_name)
+        .then(response => response.json())
+        .then(
+
+            function (data){
+                document.getElementById("firstName").innerHTML = data.first_name;
+                document.getElementById("lastName").innerHTML = data.last_name;
+                document.getElementById("userName").innerHTML = data.username;
+            }
+
+        ).catch((error) => {
+            alert("That user does not yet exist")
+            document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = "";
+        });
+    }
+
+
 </script>
 
-Userid: <input type="text" id="theUserId" />
-<input type="button" value="Get User" onclick="hello(document.getElementById('theUserId').value);" />
+    User id: <input type="text" id="theUserId" value=''/>
+    <input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);"  />
+<br>
+    User Name: <input type="text" id="theUserName" value=''/>
+    <input type="button" value="Get User name" onclick="usernameselect(document.getElementById('theUserName').value);"  />
+<br>
+    First Name: <input type="text" id="theUserFirst" value=''/>
+    <input type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" />
+<br>
+    Last Name: <input type="text" id="theUserLast" value=''/>
+    <input type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);"  />
+<br>
 
 <div id="firstName"></div>
-<div id="lastName"></div>
-<div id="userName"></div>
-
-
-
+<div id="lastName" ></div>
+<div id="userName" ></div>
