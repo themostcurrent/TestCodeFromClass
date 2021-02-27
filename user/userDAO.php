@@ -42,7 +42,7 @@ class UserDAO {
     require_once('./utilities/connection.php');
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO testdb.users (`userName`,
+    $stmt = $conn->prepare("INSERT INTO user_table.users (`userName`,
     `password`,
     `firstName`,
     `lastName`) VALUES (?, ?, ?, ?)");
