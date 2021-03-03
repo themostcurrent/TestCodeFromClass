@@ -9,7 +9,6 @@
 
     $user = new user();
     $user->getUserL($_GET["id"]);
-    echo $_GET["id"];
     echo json_encode($user);
 
 ?>
