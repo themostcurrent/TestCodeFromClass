@@ -30,7 +30,7 @@ function userselect(user_id)
 // select statement based off username
     function usernameselect(username)
     {
-        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + username)
+        fetch('https://bookscs3620.azurewebsites.net/viewUserUserName.php?id=' + username)
         .then(response => response.json())
         .then(
 
@@ -51,7 +51,7 @@ function userselect(user_id)
 // select statement based off first name
 function firstnameselect(first_name)
     {
-        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + first_name)
+        fetch('https://bookscs3620.azurewebsites.net/viewUserFirstName.php?id=' + first_name)
         .then(response => response.json())
         .then(
 
@@ -72,7 +72,7 @@ function firstnameselect(first_name)
 // select statement based off last name
 function lastnameselect(last_name)
     {
-        fetch('https://bookscs3620.azurewebsites.net/users.php?id=' + last_name)
+        fetch('https://bookscs3620.azurewebsites.net/viewUserLastName.php?id=' + last_name)
         .then(response => response.json())
         .then(
 
