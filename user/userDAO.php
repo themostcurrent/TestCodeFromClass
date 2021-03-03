@@ -74,4 +74,68 @@ class UserDAO {
     $conn->close();
   }
 }
+
+
+
+// for username
+function getUserName($user){
+  require_once('./utilities/connection.php');
+  
+  $sql = "SELECT firstName, lastName, userName, userId FROM users WHERE userName =" .  $user->getUserName();
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+      $user->setFirstName($row["firstName"]);
+      $user->setLastName($row["lastName"]);
+      $user->setUsername($row["userName"]);
+  }
+  } else {
+      echo "0 results";
+  }
+  $conn->close();
+}
+
+// for firstname
+function getUserFirstName($user){
+  require_once('./utilities/connection.php');
+  
+  $sql = "SELECT firstName, lastName, userName FROM users WHERE firstName =" .  $user->getFirstName();
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+      $user->setFirstName($row["firstName"]);
+      $user->setLastName($row["lastName"]);
+      $user->setUsername($row["userName"]);
+  }
+  } else {
+      echo "0 results";
+  }
+  $conn->close();
+}
+
+// for lastname
+function getUserLastName($user){
+  require_once('./utilities/connection.php');
+  
+  $sql = "SELECT firstName, lastName, userName, userId FROM users WHERE lastName =" .  $user->getLastName();
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+      $user->setFirstName($row["firstName"]);
+      $user->setLastName($row["lastName"]);
+      $user->setUsername($row["userName"]);
+  }
+  } else {
+      echo "0 results";
+  }
+  $conn->close();
+}
+
+
 ?>

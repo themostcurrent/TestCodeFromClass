@@ -65,6 +65,30 @@ class User implements \JsonSerializable {
     return $userDAO->checkLogin($username, $password);
   }
 
+  // for username
+  function getUserN($username){
+    $this->username = $username;
+    $userDAO = new userDAO();
+    $userDAO->getUserName($this);
+    return $this;
+  }
+
+  // for first name
+  function getUserF($first_name){
+    $this->first_name = $first_name;
+    $userDAO = new userDAO();
+    $userDAO->getUserFirstName($this);
+    return $this;
+  }
+
+  // for last name
+  function getUserL($last_name){
+    $this->last_name = $last_name;
+    $userDAO = new userDAO();
+    $userDAO->getUserLastName($this);
+    return $this;
+  }
+
   public function jsonSerialize(){
       $vars = get_object_vars($this);
       return $vars;
