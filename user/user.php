@@ -69,7 +69,7 @@ class User implements \JsonSerializable {
   function getUserN($username){
     $this->username = $username;
     $userDAO = new userDAO();
-    $userDAO->getUserName($this);
+    $userDAO->getUserN($this);
     return $this;
   }
 
@@ -77,7 +77,7 @@ class User implements \JsonSerializable {
   function getUserF($first_name){
     $this->first_name = $first_name;
     $userDAO = new userDAO();
-    $userDAO->getUserFirstName($this);
+    $userDAO->getUserFirstN($this);
     return $this;
   }
 
@@ -85,7 +85,7 @@ class User implements \JsonSerializable {
   function getUserL($last_name){
     $this->last_name = $last_name;
     $userDAO = new userDAO();
-    $userDAO->getUserLastName($this);
+    $userDAO->getUserLastN($this);
     return $this;
   }
 
