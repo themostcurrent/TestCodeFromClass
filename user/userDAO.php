@@ -80,7 +80,7 @@ class UserDAO {
 function getUserN($user){
   require_once('./utilities/connection.php');
   
-  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE userName =" .  $user->getUserName();
+  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE userName ="."'". $user->getUsername() ."'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -100,7 +100,7 @@ function getUserN($user){
 function getUserFirstN($user){
   require_once('./utilities/connection.php');
   
-  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE firstName =" .  $user->getFirstName();
+  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE firstName ="."'". $user->getFirstName() ."'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -120,7 +120,7 @@ function getUserFirstN($user){
 function getUserLastN($user){
   require_once('./utilities/connection.php');
   
-  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE lastName =" .  $user->getLastName();
+  $sql = "SELECT firstName, lastName, userName FROM user_table.users WHERE lastName ="."'". $user->getLastName() ."'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
