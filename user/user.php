@@ -44,7 +44,6 @@ class User implements \JsonSerializable {
   }
 
   function getUser($user_id){
-    echo $user_id;
     $this->user_id = $user_id;
     $userDAO = new userDAO();
     $userDAO->getUser($this);
@@ -68,8 +67,6 @@ class User implements \JsonSerializable {
 
   // for username
   function getUserN($username){
-    echo $username;
-
     $this->username = $username;
     $userDAO = new userDAO();
     $userDAO->getUserN($this);
@@ -78,8 +75,6 @@ class User implements \JsonSerializable {
 
   // for first name
   function getUserF($first_name){
-    echo $first_name;
-
     $this->first_name = $first_name;
     $userDAO = new userDAO();
     $userDAO->getUserFirstN($this);
@@ -88,9 +83,6 @@ class User implements \JsonSerializable {
 
   // for last name
   function getUserL($last_name){
-
-    echo $last_name;
-
     $this->last_name = $last_name;
     $userDAO = new userDAO();
     $userDAO->getUserLastN($this);
