@@ -1,7 +1,7 @@
 <?php
 require_once('./show/showDAO.php');
 
-class User implements \JsonSerializable {
+class Show implements \JsonSerializable {
   // Properties
   private $show_id;
   private $showName;
