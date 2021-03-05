@@ -15,11 +15,11 @@ class ShowDAO {
         while($row = $result->fetch_assoc()) {
             $show = new show();
 
-            $user->setShowId($row["showId"]);
-            $user->setShowName($row["showName"]);
-            $user->setRating($row["rating"]);
-            $user->setAnalysis($row["analysis"]);
-            $user->setUserId($row["userId"]);
+            $shows->setShowId($row["showId"]);
+            $shows->setShowName($row["showName"]);
+            $shows->setRating($row["rating"]);
+            $shows->setAnalysis($row["analysis"]);
+            $shows->setUserId($row["userId"]);
             $shows[$index] = $show;
             $index = $index + 1;
         }
