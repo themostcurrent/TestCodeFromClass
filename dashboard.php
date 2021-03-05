@@ -3,7 +3,7 @@
     <!-- Begin page content -->
     <main role="main" class="container">
       <h1 class="mt-5">Joey's Favorite Shows</h1>
-      <a href="./create_show.php">Add New show</a>
+      <a href="./create_show.php" class="btn-primary form-control btn">Add New show</a>
 
       <?php
         ini_set('display_errors', 1);
