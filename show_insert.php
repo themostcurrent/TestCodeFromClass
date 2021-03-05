@@ -9,9 +9,9 @@ session_start();
 require_once('./show/show.php');
 
 $show = new show();
-$show->setShowName($row["showName"]);
-$show->setRating($row["showRating"]);
-$show->setAnalysis($row["showAnalysis"]);
+$show->setShowName(($_POST["showName"]);
+$show->setRating(($_POST["showRating"]);
+$show->setAnalysis(($_POST["showAnalysis"]);
 $show->createShow(); 
 
 header("Location: dashboard.php");
