@@ -21,8 +21,8 @@
             echo '<div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">' . $shows[$x]->getShowName() . '</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $shows[$x]->getShowRating() . '</h6>
-                        <p class="card-text">' . $shows[$x]->getShowDescription() . '</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $shows[$x]->getRating() . '</h6>
+                        <p class="card-text">' . $shows[$x]->getAnalysis() . '</p>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
