@@ -6,7 +6,7 @@
       <div class="col-3">
         <a href="./create_show.php" class="btn-primary form-control btn">Add New show</a>
       </div>
-
+  <br/>
       <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
