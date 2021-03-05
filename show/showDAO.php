@@ -4,7 +4,7 @@ class ShowDAO {
     require_once('./utilities/connection.php');
     require_once('./show/show.php');
 
-    $sql = "SELECT * FROM shows_table.shows";
+    $sql = "SELECT showId, showName, rating, analysis, userId FROM shows_table.shows";
     $result = $conn->query($sql);
 
     $shows;
@@ -23,6 +23,9 @@ class ShowDAO {
             $shows[$index] = $show;
             $index = $index + 1;
         }
+    }
+    else {
+        echo "0 results";
     } 
     $conn->close();
 
