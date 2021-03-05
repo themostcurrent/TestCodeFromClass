@@ -31,6 +31,34 @@ class ShowDAO {
 
     return $shows;
   }
+
+  function createShow($show){
+    require_once('./utilities/connection.php');
+
+    // prepare and bind
+    $stmt = $conn->prepare("INSERT INTO shows_table.shows (`showName`,
+    `rating`,
+    `analysis`) VALUES (?, ?, ?)");
+
+    $sn = $show->getShowName();
+    $r = $show->getRating();
+    $a = $show->getAnalysis();
+
+    $stmt->bind_param("sss", $sn, $r, $a);
+    $stmt->execute();
+
+    $stmt->close();
+    $conn->close();
+  }
+
+
+
+
+
+
+
+
+
 }//endclass
 ?>
 

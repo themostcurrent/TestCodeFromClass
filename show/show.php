@@ -39,7 +39,7 @@ class Show implements \JsonSerializable {
   function setAnalysis($analysis){
     $this->analysis = $analysis;
   }
-  
+
   function setUserId($user_id){
     $this->user_id = $user_id;
   }
@@ -52,6 +52,10 @@ class Show implements \JsonSerializable {
   public function jsonSerialize(){
       $vars = get_object_vars($this);
       return $vars;
+  }
+  function createShow(){
+    $showDAO = new showDAO();
+    $showDAO->createShow($this);
   }
 }
 ?>
