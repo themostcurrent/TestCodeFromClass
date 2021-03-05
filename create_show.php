@@ -5,8 +5,8 @@
 
 <form method="POST" action="show_insert.php" >
     showName:<input type="text" name="showName" /><br />
-    rating:<input type="text" name="rating" /><br />
-    analysis:<input type="text" name="analysis" /><br />
+    rating:<input type="text" name="showRating" /><br />
+    analysis:<input type="text" name="showAnalysis" /><br />
     <input type="submit" value="Create Show" />
 </form>
 

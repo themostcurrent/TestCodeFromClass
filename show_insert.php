@@ -10,9 +10,9 @@ require_once('./show/show.php');
 
 $show = new show();
 $show->setShowName($row["showName"]);
-$show->setRating($row["rating"]);
-$show->setAnalysis($row["analysis"]);
+$show->setRating($row["showRating"]);
+$show->setAnalysis($row["showAnalysis"]);
 $show->createShow(); 
 
-header("Location: login.html");
+header("Location: dashboard.php");
 ?>
