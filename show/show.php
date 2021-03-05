@@ -18,24 +18,28 @@ class Show implements \JsonSerializable {
   function setShowId($show_id){
     $this->show_id = $show_id;
   }
+
   function getShowName() {
     return $this->showName;
   }
   function setShowName($showName){
     $this->showName = $showName;
   }
+
   function getRating() {
     return $this->rating;
   }
   function setRating($rating){
     $this->rating = $rating;
   }
+
   function getAnalysis() {
     return $this->analysis;
   }
   function setAnalysis($analysis){
     $this->analysis = $analysis;
   }
+  
   function setUserId($user_id){
     $this->user_id = $user_id;
   }
