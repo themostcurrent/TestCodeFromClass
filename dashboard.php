@@ -3,9 +3,10 @@
     <!-- Begin page content -->
     <main role="main" class="container">
       <h1 class="mt-5">Joey's Favorite Shows</h1>
-      <div class="col-6">
-        <a asp-page="./Index" class="btn-primary form-control btn">Back to List</a>
+      <div class="col-3">
+        <a href="./create_show.php" class="btn-primary form-control btn">Add New show</a>
       </div>
+
       <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
