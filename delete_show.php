@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 require_once('./sessioncheck.php');
 
+require_once('./show/show.php');
 
-require_once('.show/show.php');
 
 $show = new show();
 $shows = $show->deleteShow($_SESSION["user_id"], $_GET["show_id"]);
