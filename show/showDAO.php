@@ -84,7 +84,20 @@ class ShowDAO {
     return $shows;
   }
 
+  function deleteShow($uid,$sid){
+    require_once('./utilities/connection.php');
 
+    $sql = "DELETE FROM shows_table.shows WHERE userId =" . $uid . " AND showId =" . $sid;
+
+
+    if ($conn->query($sql) == TRUE) {
+      echo "Show Deleted";
+  }
+  else {
+      echo "0 results";
+  } 
+    $conn->close();
+  }
 
 
 

@@ -8,6 +8,10 @@
       </div>
   <br/>
       <?php
+        if(isset($_GET["del"]) AND $_GET["del"] == "true"){
+          echo"<script>alert('Show was deleted!');</script>";
+        }
+
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
@@ -25,7 +29,7 @@
                         <h5 class="card-title">' . $shows[$x]->getShowName() . '</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $shows[$x]->getRating() . '</h6>
                         <p class="card-text">' . $shows[$x]->getAnalysis() . '</p>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="delete_show.php?show_id=' . $shows[$x]->getShowId() . '" class="card-link">Delete Show</a>
                     </div>
                   </div>
                   <br />';

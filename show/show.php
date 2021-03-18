@@ -56,6 +56,13 @@ class Show implements \JsonSerializable {
   function createShow(){
     $showDAO = new showDAO();
     $showDAO->createShow($this);
+  }  
+  function deleteShow($user_id,$show_id){
+    $showDAO = new showDAO();
+    $showDAO->deleteShow($user_id,$show_id);
   }
+
+
+
 }
 ?>
