@@ -41,10 +41,9 @@ class ShowDAO {
     $sn = $show->getShowName();
     $r = $show->getRating();
     $a = $show->getAnalysis();
-    $a = $show->getAnalysis();
     $s = $show->getUserId();
 
-    $stmt->bind_param("ssss", $sn, $r, $a,$s);
+    $stmt->bind_param("ssss", $sn, $r, $s,$a);
     $stmt->execute();
 
     $stmt->close();
