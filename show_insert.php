@@ -6,12 +6,15 @@ error_reporting(E_ALL);
 
 session_start();
 
+require_once('./sessioncheck.php');
+
 require_once('./show/show.php');
 
 $show = new show();
 $show->setShowName($_POST["showName"]);
 $show->setRating($_POST["showRating"]);
 $show->setAnalysis($_POST["showAnalysis"]);
+$show->setUserId($session["user_id"]);
 $show->createShow(); 
 
 header("Location: dashboard.php");

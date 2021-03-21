@@ -36,15 +36,15 @@ class ShowDAO {
     require_once('./utilities/connection.php');
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO shows_table.shows (`showName`,
-    `rating`,
-    `analysis`) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO shows_table.shows (`showName`,`rating`,`showId`,`analysis`) VALUES (?, ?, ?,?)");
 
     $sn = $show->getShowName();
     $r = $show->getRating();
     $a = $show->getAnalysis();
+    $a = $show->getAnalysis();
+    $s = $show->getUserId();
 
-    $stmt->bind_param("sss", $sn, $r, $a);
+    $stmt->bind_param("ssss", $sn, $r, $a,$s);
     $stmt->execute();
 
     $stmt->close();

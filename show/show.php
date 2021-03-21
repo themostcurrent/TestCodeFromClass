@@ -43,6 +43,9 @@ class Show implements \JsonSerializable {
   function setUserId($user_id){
     $this->user_id = $user_id;
   }
+  function getUserId($user_id){
+    return $this->user_id;
+  }
  
   function getMyShows($user_id){
     $showDAO = new showDAO();
